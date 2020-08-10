@@ -1,0 +1,27 @@
+@import "setup";
+
+body {
+  background-color: #000000;
+}
+
+.header {
+  height: 100vh;
+
+  &__nav {
+    display: flex;
+    justify-content: space-evenly;
+    &__item {
+      list-style: none;
+      &__link {
+        color: red;
+      }
+    }
+  }
+
+  &__hero {
+    background-image: url(/assets/Gear.JPG);
+    background-size: cover;
+    background-position: bottom center;
+    height: 60vh;
+  }
+}
