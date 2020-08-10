@@ -295,8 +295,27 @@ body {
 }
 
 .header__hero {
-  background-image: url(/assets/Gear.JPG);
+  background-image: url(/assets/gear.png);
   background-size: cover;
   background-position: bottom center;
   height: 60vh;
+  position: relative;
+}
+
+.header__hero__cntr {
+  background-color: #0000d5;
+  margin: 0;
+  padding: 0;
+  width: 450px;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+}
+
+.header__hero__cntr__img {
+  width: 450px;
+  display: block;
+  opacity: 0.7;
+  padding: 10px 0 10px 10px;
+  background-color: black;
 }

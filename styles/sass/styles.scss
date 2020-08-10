@@ -19,9 +19,28 @@ body {
   }
 
   &__hero {
-    background-image: url(/assets/Gear.JPG);
+    background-image: url(/assets/gear.png);
     background-size: cover;
     background-position: bottom center;
     height: 60vh;
+    position: relative;
+
+    &__cntr {
+      background-color: #0000d5;
+      margin: 0;
+      padding: 0;
+      width: 450px;
+      position: absolute;
+      right: 0;
+      bottom: -50px;
+
+      &__img {
+        width: 450px;
+        display: block;
+        opacity: 0.7;
+        padding: 10px 0 10px 10px;
+        background-color: black;
+      }
+    }
   }
 }
