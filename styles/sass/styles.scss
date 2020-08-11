@@ -2,6 +2,7 @@
 
 body {
   background-color: #000000;
+  background-image: url(/assets/bg.png);
 }
 
 .header {
@@ -13,19 +14,21 @@ body {
     &__item {
       list-style: none;
       &__link {
-        color: red;
+        font-family: "Special Elite", "Times New Roman", Times, serif;
+        color: #ffffff;
+        text-decoration: none;
       }
     }
   }
 
   &__hero {
-    background-image: url(/assets/gear.png);
+    background-image: url(/assets/stage.jpg);
     background-size: cover;
-    background-position: bottom center;
-    height: 60vh;
+    // background-position: bottom center;
+    height: 80vh;
     position: relative;
 
-    &__cntr {
+    &__container {
       background-color: #0000d5;
       margin: 0;
       padding: 0;
@@ -43,4 +46,63 @@ body {
       }
     }
   }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  border: 1px solid red;
+  width: 90%;
+}
+
+/* your rows */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+  margin-bottom: 32px;
+  height: 700px;
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/* your cols */
+.third {
+  width: calc(33.3% - 16px);
+  border: 1px solid green;
+}
+
+.two-thirds {
+  width: calc(66.6% - 16px);
+  border: 1px solid green;
+}
+
+.half {
+  width: calc(50% - 16px);
+  border: 1px solid green;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-image {
+  background-color: red;
+  height: 50%;
+}
+
+.feature-content {
+  background-color: pink;
+  height: 50%;
+}
+
+.row img {
+  object-fit: cover;
+  object-position: top center;
 }
