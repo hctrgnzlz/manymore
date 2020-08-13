@@ -1,0 +1,29 @@
+//VARIABLES & MIXINS//
+
+//fonts//
+$font: "Righteous", sans-serif;
+$text: "Raleway", sans-serif;
+
+//backgrounds//
+$bg: "../assets/bg.png";
+$hero: "../assets/stage.jpg";
+
+//colors//
+$font-color: #ffffff;
+
+//mixins//
+@mixin hover {
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(to right, red, red 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  &:hover {
+    background-position: 0 100%;
+  }
+}

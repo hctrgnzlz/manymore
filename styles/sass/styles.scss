@@ -1,10 +1,11 @@
 @import "setup";
+@import "variablemix";
 
 body {
   background-color: #000000;
-  background-image: url(../assets/bg.png);
-  font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  background-image: url($bg);
+  font-family: $font;
+  color: $font-color;
 }
 
 .header {
@@ -12,7 +13,6 @@ body {
   justify-content: space-between;
 
   &__title {
-    font-family: "Righteous", cursive;
     text-transform: uppercase;
     font-size: 30px;
     margin: 0;
@@ -28,49 +28,78 @@ body {
       list-style: none;
 
       &__link {
-        font-family: "Righteous", cursive;
-        color: #ffffff;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 30px;
         margin-right: 40px;
         position: relative;
         display: inline-block;
-        overflow: hidden;
-        background: linear-gradient(to right, red, red 50%, white 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% 100%;
-        background-position: 100%;
-        transition: background-position 275ms ease;
-        text-decoration: none;
-        &:hover {
-          background-position: 0 100%;
-        }
+        @include hover;
       }
     }
   }
 }
 
 .hero {
-  background-image: url(../assets/stage.jpg);
+  background-image: url($hero);
   background-size: cover;
   height: 80vh;
   display: flex;
   position: relative;
+  margin-bottom: 100px;
 
   &__logo {
-    width: 40%;
+    width: 50%;
     align-self: center;
     position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &__social {
+    position: absolute;
+    right: 20px;
     bottom: 0;
+
+    &__item {
+      list-style: none;
+      margin-bottom: 20px;
+
+      & a {
+        font-size: 30px;
+        @include hover;
+      }
+    }
   }
 }
 
 .about {
   display: flex;
   justify-content: center;
+
+  &__title {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  &__gallery {
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    &__item {
+      list-style: none;
+      margin-right: 20px;
+
+      &__img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .wrapper {
@@ -84,7 +113,7 @@ body {
   justify-content: space-between;
   border: 1px solid blue;
   margin-bottom: 32px;
-  height: 700px;
+  height: 600px;
 }
 .row:last-child {
   margin-bottom: 0;

@@ -271,8 +271,8 @@ html {
 
 body {
   background-color: #000000;
-  background-image: url(../assets/bg.png);
-  font-family: "Raleway", sans-serif;
+  background-image: url("../assets/bg.png");
+  font-family: "Righteous", sans-serif;
   color: #ffffff;
 }
 
@@ -286,7 +286,6 @@ body {
 }
 
 .header__title {
-  font-family: "Righteous", cursive;
   text-transform: uppercase;
   font-size: 30px;
   margin: 0;
@@ -308,13 +307,12 @@ body {
 }
 
 .header__nav__item__link {
-  font-family: "Righteous", cursive;
-  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 30px;
   margin-right: 40px;
   position: relative;
+  display: inline-block;
   display: inline-block;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, red), color-stop(50%, white));
@@ -334,22 +332,55 @@ body {
 }
 
 .hero {
-  background-image: url(../assets/stage.jpg);
+  background-image: url("../assets/stage.jpg");
   background-size: cover;
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .hero__logo {
-  width: 40%;
+  width: 50%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.hero__social {
+  position: absolute;
+  right: 20px;
   bottom: 0;
+}
+
+.hero__social__item {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.hero__social__item a {
+  font-size: 30px;
+  display: inline-block;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, red), color-stop(50%, white));
+  background: linear-gradient(to right, red, red 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.hero__social__item a:hover {
+  background-position: 0 100%;
 }
 
 .about {
@@ -359,6 +390,35 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.about__title {
+  font-size: 50px;
+  margin: 0;
+}
+
+.about__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.about__gallery__item {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.about__gallery__item__img {
+  width: 100%;
+  display: block;
+}
+
+.about__gallery__item:last-child {
+  margin-right: 0;
 }
 
 .wrapper {
@@ -375,7 +435,7 @@ body {
           justify-content: space-between;
   border: 1px solid blue;
   margin-bottom: 32px;
-  height: 700px;
+  height: 600px;
 }
 
 .row:last-child {
