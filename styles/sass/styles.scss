@@ -7,6 +7,14 @@ body {
   font-family: $font;
   color: $font-color;
 }
+.wrapper {
+  width: 90%;
+}
+.title {
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 0;
+}
 
 .header {
   display: flex;
@@ -46,7 +54,7 @@ body {
   height: 80vh;
   display: flex;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   &__logo {
     width: 50%;
@@ -76,10 +84,38 @@ body {
 .about {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 
-  &__title {
-    font-size: 50px;
-    margin: 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    margin-bottom: 30px;
+    height: 600px;
+
+    &__side {
+      width: calc(33.3% - 16px);
+      object-fit: cover;
+    }
+
+    &__content {
+      width: calc(66.6% - 16px);
+      display: flex;
+      flex-direction: column;
+
+      &__img {
+        background-color: red;
+        height: 50%;
+        object-fit: cover;
+      }
+
+      &__text {
+        font-family: $text;
+        text-align: center;
+        height: 50%;
+        background-color: rgba(37, 35, 35, 0.6);
+      }
+    }
   }
 
   &__gallery {
@@ -102,55 +138,28 @@ body {
   }
 }
 
-.wrapper {
-  width: 90%;
-}
-
-/* your rows */
-
-.row {
+.tour {
   display: flex;
-  justify-content: space-between;
-  border: 1px solid blue;
-  margin-bottom: 32px;
-  height: 600px;
-}
-.row:last-child {
-  margin-bottom: 0;
-}
+  align-items: center;
+  justify-content: center;
 
-/* your cols */
-.third {
-  width: calc(33.3% - 16px);
-  border: 1px solid green;
-}
+  &__banner {
+    background-image: url(/assets/bar.png);
+    height: 45vh;
+    background-size: cover;
+  }
 
-.two-thirds {
-  width: calc(66.6% - 16px);
-  border: 1px solid green;
-}
+  &__list {
+    margin: 0;
+    padding: 0;
 
-.half {
-  width: calc(50% - 16px);
-  border: 1px solid green;
-}
+    &__date {
+      list-style: none;
+      margin-bottom: 10px;
+    }
 
-.feature {
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-image {
-  background-color: red;
-  height: 50%;
-}
-
-.feature-content {
-  background-color: pink;
-  height: 50%;
-}
-
-.row img {
-  object-fit: cover;
-  object-position: top center;
+    &__date:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
