@@ -10,6 +10,7 @@ body {
 .wrapper {
   width: 90%;
 }
+
 .title {
   font-size: 50px;
   text-transform: uppercase;
@@ -89,13 +90,13 @@ body {
   &__container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid blue;
     margin-bottom: 30px;
     height: 600px;
 
     &__side {
       width: calc(33.3% - 16px);
       object-fit: cover;
+      @include border;
     }
 
     &__content {
@@ -104,9 +105,9 @@ body {
       flex-direction: column;
 
       &__img {
-        background-color: red;
         height: 50%;
         object-fit: cover;
+        @include border;
       }
 
       &__text {
@@ -122,6 +123,7 @@ body {
     display: flex;
     padding: 0;
     justify-content: space-evenly;
+
     &__item {
       list-style: none;
       margin-right: 20px;
@@ -129,6 +131,7 @@ body {
       &__img {
         width: 100%;
         display: block;
+        @include border;
       }
     }
 
@@ -138,16 +141,15 @@ body {
   }
 }
 
+.bar {
+  background-image: url($tour);
+}
+
 .tour {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-
-  &__banner {
-    background-image: url(/assets/bar.png);
-    height: 45vh;
-    background-size: cover;
-  }
+  align-items: center;
 
   &__list {
     margin: 0;
@@ -160,6 +162,39 @@ body {
 
     &__date:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.music {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+
+  &__container {
+    display: flex;
+
+    &__left {
+      width: 50%;
+      height: 60vh;
+      @include border;
+    }
+
+    &__right {
+      width: 50%;
+      height: 60vh;
+
+      &__list {
+        &__item {
+          list-style: none;
+
+          & a {
+            text-decoration: none;
+            font-size: 50px;
+            @include hover;
+          }
+        }
+      }
     }
   }
 }

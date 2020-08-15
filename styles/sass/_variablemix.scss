@@ -7,6 +7,7 @@ $text: "Raleway", sans-serif;
 //backgrounds//
 $bg: "../assets/bg.png";
 $hero: "../assets/stage.jpg";
+$tour: "../assets/bar.png";
 
 //colors//
 $font-color: #ffffff;
@@ -15,7 +16,7 @@ $font-color: #ffffff;
 @mixin hover {
   display: inline-block;
   overflow: hidden;
-  background: linear-gradient(to right, red, red 50%, white 50%);
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,4 +27,8 @@ $font-color: #ffffff;
   &:hover {
     background-position: 0 100%;
   }
+}
+
+@mixin border {
+  border: #dc143c solid 1px;
 }

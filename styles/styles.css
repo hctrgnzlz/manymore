@@ -325,8 +325,8 @@ body {
   display: inline-block;
   display: inline-block;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, red), color-stop(50%, white));
-  background: linear-gradient(to right, red, red 50%, white 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, white));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -377,8 +377,8 @@ body {
   font-size: 30px;
   display: inline-block;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, red), color-stop(50%, white));
-  background: linear-gradient(to right, red, red 50%, white 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, white));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -410,7 +410,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid blue;
   margin-bottom: 30px;
   height: 600px;
 }
@@ -419,6 +418,7 @@ body {
   width: calc(33.3% - 16px);
   -o-object-fit: cover;
      object-fit: cover;
+  border: #dc143c solid 1px;
 }
 
 .about__container__content {
@@ -433,10 +433,10 @@ body {
 }
 
 .about__container__content__img {
-  background-color: red;
   height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  border: #dc143c solid 1px;
 }
 
 .about__container__content__text {
@@ -464,28 +464,31 @@ body {
 .about__gallery__item__img {
   width: 100%;
   display: block;
+  border: #dc143c solid 1px;
 }
 
 .about__gallery__item:last-child {
   margin-right: 0;
 }
 
+.bar {
+  background-image: url("../assets/bar.png");
+}
+
 .tour {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.tour__banner {
-  background-image: url(/assets/bar.png);
-  height: 45vh;
-  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tour__list {
@@ -500,4 +503,56 @@ body {
 
 .tour__list__date:last-child {
   margin-bottom: 0;
+}
+
+.music {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80vh;
+}
+
+.music__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.music__container__left {
+  width: 50%;
+  height: 60vh;
+  border: #dc143c solid 1px;
+}
+
+.music__container__right {
+  width: 50%;
+  height: 60vh;
+}
+
+.music__container__right__list__item {
+  list-style: none;
+}
+
+.music__container__right__list__item a {
+  text-decoration: none;
+  font-size: 50px;
+  display: inline-block;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, white));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.music__container__right__list__item a:hover {
+  background-position: 0 100%;
 }
