@@ -1,0 +1,57 @@
+@import "variablemix";
+
+@media (max-width: 850px) {
+  .hamburger,
+  .exit {
+    display: block;
+  }
+
+  .hamburger {
+    @include hover;
+    font-size: 25px;
+  }
+
+  .exit {
+    @include hoverfooter;
+    font-size: 35px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url($bgred);
+    z-index: 10;
+  }
+
+  .hamburger {
+    align-items: center;
+
+    &__logo {
+      display: block;
+      width: 350px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .fullscreen ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul a {
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    @include hoverfooter;
+    transition: background-position 800ms ease;
+  }
+}

@@ -12,6 +12,34 @@ body {
   width: 90%;
 }
 
+button {
+  background-color: #0000;
+  border: none;
+}
+
+.hamburger {
+  color: $font-color;
+
+  &__logo {
+    display: none;
+  }
+}
+
+.hamburger,
+.exit {
+  display: none;
+}
+
+.exit {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.show.menu {
+  display: block;
+}
+
 .title {
   font-size: 50px;
   text-transform: uppercase;
@@ -145,6 +173,7 @@ body {
 
 .bar {
   background-image: url($tour);
+  background-size: cover;
 }
 
 .tour {
@@ -171,7 +200,7 @@ body {
 .music {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 70vh;
 
   &__container {
     display: flex;
@@ -206,7 +235,7 @@ body {
   justify-content: center;
 
   &__banner {
-    background-image: url(/assets/contact.png);
+    background-image: url($contact);
     background-size: cover;
     height: 80vh;
     display: flex;
@@ -231,8 +260,7 @@ body {
 }
 
 .footer {
-  background-image: url(/assets/red.jpg);
-  background-size: cover;
+  background-image: url($bgred);
   background-position: bottom;
   height: 10vh;
   display: flex;
@@ -280,3 +308,5 @@ body {
     }
   }
 }
+
+@import "mediaqueries";

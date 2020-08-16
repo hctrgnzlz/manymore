@@ -20,7 +20,7 @@
   background-image: linear-gradient(
     to right,
     transparent,
-    rgb(220, 20, 60),
+    rgb(85, 12, 12),
     transparent
   );
 }
@@ -34,7 +34,7 @@
   width: 14px;
   height: 14px;
   transform: rotate(45deg);
-  background-color: $highlight;
-  border-bottom: 1px solid rgb(220, 20, 60);
-  border-right: 1px solid rgb(220, 20, 60);
+  background-color: rgb(85, 12, 12);
+  border-bottom: 1px solid rgb(85, 12, 12);
+  border-right: 1px solid rgb(85, 12, 12);
 }

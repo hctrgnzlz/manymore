@@ -6,8 +6,10 @@ $text: "Raleway", sans-serif;
 
 //backgrounds//
 $bg: "../assets/bg.png";
+$bgred: "../assets/redbg.png";
 $hero: "../assets/stage.jpg";
 $tour: "../assets/bar.png";
+$contact: "../assets/contact.png";
 
 //colors//
 $font-color: #ffffff;
@@ -31,7 +33,7 @@ $highlight: #dc143c;
 }
 
 @mixin border {
-  border: #dc143c solid 1px;
+  border: #550c0c solid 1px;
 }
 
 @mixin hoverfooter {
@@ -43,7 +45,7 @@ $highlight: #dc143c;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
   background-position: 100%;
-  transition: background-position 275ms ease;
+  transition: background-position 245ms ease;
   text-decoration: none;
   &:hover {
     background-position: 0 100%;
