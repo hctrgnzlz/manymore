@@ -269,6 +269,40 @@ html {
   overflow: hidden;
 }
 
+.divider {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 1px;
+}
+
+.divider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(crimson), to(transparent));
+  background-image: linear-gradient(to right, transparent, crimson, transparent);
+}
+
+.divider:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -7px;
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #dc143c;
+  border-bottom: 1px solid crimson;
+  border-right: 1px solid crimson;
+}
+
 body {
   background-color: #000000;
   background-image: url("../assets/bg.png");
@@ -316,7 +350,7 @@ body {
   list-style: none;
 }
 
-.header__nav__item__link {
+.header__nav__item a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 30px;
@@ -325,8 +359,8 @@ body {
   display: inline-block;
   display: inline-block;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, white));
-  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, #ffffff));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, #ffffff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -337,7 +371,7 @@ body {
   text-decoration: none;
 }
 
-.header__nav__item__link:hover {
+.header__nav__item a:hover {
   background-position: 0 100%;
 }
 
@@ -377,8 +411,8 @@ body {
   font-size: 30px;
   display: inline-block;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, white));
-  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, #ffffff));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, #ffffff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -444,6 +478,7 @@ body {
   text-align: center;
   height: 50%;
   background-color: rgba(37, 35, 35, 0.6);
+  border: #dc143c solid 1px;
 }
 
 .about__gallery {
@@ -541,8 +576,8 @@ body {
   font-size: 50px;
   display: inline-block;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, white));
-  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, #ffffff));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, #ffffff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -554,5 +589,158 @@ body {
 }
 
 .music__container__right__list__item a:hover {
+  background-position: 0 100%;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__banner {
+  background-image: url(/assets/contact.png);
+  background-size: cover;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #dc143c solid 1px;
+}
+
+.contact__banner__text {
+  padding: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+  border: #dc143c solid 1px;
+  background-color: #000000;
+}
+
+.contact__banner__text a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, #ffffff));
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, #ffffff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.contact__banner__text a:hover {
+  background-position: 0 100%;
+}
+
+.footer {
+  background-image: url(/assets/red.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.footer__nav__item {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.footer__nav__item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  display: inline-block;
+  overflow: hidden;
+  background: -webkit-gradient(linear, right top, left top, from(#000000), color-stop(50%, #000000), color-stop(50%, #ffffff));
+  background: linear-gradient(to left, #000000, #000000 50%, #ffffff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.footer__nav__item a:hover {
+  background-position: 0 100%;
+}
+
+.footer__logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 170px;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.footer__social__item {
+  list-style: none;
+}
+
+.footer__social__item a {
+  font-size: 30px;
+  display: inline-block;
+  overflow: hidden;
+  background: -webkit-gradient(linear, right top, left top, from(#000000), color-stop(50%, #000000), color-stop(50%, #ffffff));
+  background: linear-gradient(to left, #000000, #000000 50%, #ffffff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.footer__social__item a:hover {
   background-position: 0 100%;
 }

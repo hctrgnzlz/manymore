@@ -1,5 +1,6 @@
 @import "setup";
 @import "variablemix";
+@import "divider";
 
 body {
   background-color: #000000;
@@ -36,7 +37,7 @@ body {
     &__item {
       list-style: none;
 
-      &__link {
+      & a {
         text-decoration: none;
         text-transform: uppercase;
         font-size: 30px;
@@ -115,6 +116,7 @@ body {
         text-align: center;
         height: 50%;
         background-color: rgba(37, 35, 35, 0.6);
+        @include border;
       }
     }
   }
@@ -194,6 +196,86 @@ body {
             @include hover;
           }
         }
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+
+  &__banner {
+    background-image: url(/assets/contact.png);
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include border;
+
+    &__text {
+      padding: 20px;
+      font-size: 40px;
+      text-transform: uppercase;
+      @include border;
+      background-color: #000000;
+
+      & a {
+        text-decoration: none;
+        color: $font-color;
+        @include hover;
+      }
+    }
+  }
+}
+
+.footer {
+  background-image: url(/assets/red.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+  &__nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+
+    &__item {
+      list-style: none;
+      margin-right: 20px;
+
+      & a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        @include hoverfooter;
+      }
+    }
+  }
+
+  &__logo {
+    align-self: center;
+    width: 170px;
+  }
+
+  &__social {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+
+    &__item {
+      list-style: none;
+
+      & a {
+        font-size: 30px;
+        @include hoverfooter;
       }
     }
   }

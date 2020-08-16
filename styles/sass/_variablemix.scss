@@ -11,12 +11,13 @@ $tour: "../assets/bar.png";
 
 //colors//
 $font-color: #ffffff;
+$highlight: #dc143c;
 
 //mixins//
 @mixin hover {
   display: inline-block;
   overflow: hidden;
-  background: linear-gradient(to right, #dc143c, #dc143c 50%, white 50%);
+  background: linear-gradient(to right, #dc143c, #dc143c 50%, $font-color 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,4 +32,20 @@ $font-color: #ffffff;
 
 @mixin border {
   border: #dc143c solid 1px;
+}
+
+@mixin hoverfooter {
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(to left, #000000, #000000 50%, $font-color 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  &:hover {
+    background-position: 0 100%;
+  }
 }
