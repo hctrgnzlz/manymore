@@ -343,6 +343,7 @@ button {
 .nav__title {
   text-transform: uppercase;
   margin: 0;
+  font-size: 35px;
 }
 
 .nav__list {
@@ -695,9 +696,12 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__nav {
@@ -711,7 +715,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
+  padding-left: 10px;
 }
 
 .footer__nav__item {
@@ -745,7 +749,7 @@ button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 170px;
+  width: 250px;
 }
 
 .footer__social {
@@ -753,17 +757,18 @@ button {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .footer__social__item {
   list-style: none;
+  margin: 0;
 }
 
 .footer__social__item a {
@@ -784,6 +789,15 @@ button {
 
 .footer__social__item a:hover {
   background-position: 0 100%;
+}
+
+@media (max-width: 950px) {
+  .nav__title {
+    font-size: 25px;
+  }
+  .nav__list__item a {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -858,6 +872,7 @@ button {
   .nav__list__item a {
     font-size: 50px;
     padding: 15px;
+    font-weight: 800;
     display: inline-block;
     overflow: hidden;
     background: -webkit-gradient(linear, right top, left top, from(#000000), color-stop(50%, #000000), color-stop(50%, #ffffff));
@@ -873,5 +888,17 @@ button {
   }
   .nav__list__item a:hover {
     background-position: 0 100%;
+  }
+  .contact__banner__text {
+    font-size: 30px;
+  }
+  .footer__nav__item {
+    margin-right: 10px;
+  }
+  .footer__nav__item a {
+    font-size: 18px;
+  }
+  .footer__social__item a {
+    font-size: 25px;
   }
 }

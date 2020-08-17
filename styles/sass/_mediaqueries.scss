@@ -1,5 +1,20 @@
 @import "variablemix";
 
+@media (max-width: 950px) {
+  .nav {
+    &__title {
+      font-size: 25px;
+    }
+    &__list {
+      &__item {
+        & a {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   #logo {
     opacity: 1;
@@ -67,7 +82,36 @@
         & a {
           font-size: 50px;
           padding: 15px;
+          font-weight: 800;
           @include hoverfooter;
+        }
+      }
+    }
+  }
+
+  .contact {
+    &__banner {
+      &__text {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .footer {
+    &__nav {
+      &__item {
+        margin-right: 10px;
+
+        & a {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__social {
+      &__item {
+        & a {
+          font-size: 25px;
         }
       }
     }
