@@ -323,7 +323,7 @@ button {
 .title {
   font-size: 50px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .nav {
@@ -362,7 +362,7 @@ button {
 
 .nav__list__item {
   list-style: none;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .nav__list__item span {
@@ -516,11 +516,17 @@ button {
 }
 
 .about__container__content__text {
-  font-family: "Raleway", sans-serif;
-  text-align: center;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+  font-size: 16px;
+  padding: 10px;
   height: 50%;
   background-color: rgba(37, 35, 35, 0.6);
   border: #550c0c solid 1px;
+}
+
+.about__container__content__text p {
+  margin: 0 0 10px 0;
 }
 
 .about__gallery {
@@ -604,22 +610,31 @@ button {
 
 .music__container__left {
   width: 50%;
-  height: 60vh;
+  height: 45vh;
   border: #550c0c solid 1px;
 }
 
 .music__container__right {
+  height: 45vh;
   width: 50%;
-  height: 60vh;
+}
+
+.music__container__right__list {
+  padding: 0 0 0 10px;
+  margin: 0;
 }
 
 .music__container__right__list__item {
   list-style: none;
+  text-transform: uppercase;
 }
 
 .music__container__right__list__item a {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   font-size: 50px;
+  margin-bottom: 20px;
   display: inline-block;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#dc143c), color-stop(50%, #dc143c), color-stop(50%, #ffffff));
@@ -893,16 +908,141 @@ button {
   .nav__list__item a:hover {
     background-position: 0 100%;
   }
-  .contact__banner__text {
+  .about__container__content__text {
+    font-size: 13px;
+  }
+  .about .contact__banner__text {
     font-size: 30px;
+  }
+  .about .footer__nav__item {
+    margin-right: 10px;
+  }
+  .about .footer__nav__item a {
+    font-size: 18px;
+  }
+  .about .footer__social__item a {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 600px) {
+  .hero__logo {
+    width: 70%;
+  }
+  .about__container__side {
+    display: none;
+  }
+  .about__container__content {
+    width: 100%;
+  }
+  .about__container__content__text {
+    font-size: 16px;
+  }
+  .about__gallery__item {
+    width: calc(100% / 2 - 10px);
+    margin-bottom: 20px;
+  }
+  .about__gallery__item:last-child {
+    margin-right: 5px;
+  }
+  .music__container__right__list a {
+    font-size: 40px;
+  }
+  .contact__banner__text {
+    font-size: 25px;
   }
   .footer__nav__item {
     margin-right: 10px;
   }
   .footer__nav__item a {
-    font-size: 18px;
+    font-size: 15px;
   }
   .footer__social__item a {
-    font-size: 25px;
+    font-size: 20px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__logo {
+    width: 90%;
+    position: relative;
+    margin-right: 40px;
+  }
+  .hero__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    width: 60%;
+    bottom: -230px;
+  }
+  .hero__social__item a {
+    font-size: 40px;
+  }
+  .music {
+    height: 90vh;
+  }
+  .music__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .music__container__left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .music__container__right {
+    width: 100%;
+  }
+  .music__container__right__list__item {
+    text-align: center;
+  }
+  .music__container__right__list__item a {
+    font-size: 50px;
+  }
+  .bar {
+    background-position: center;
+  }
+  .contact__banner__text {
+    font-size: 22px;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__nav__item {
+    margin-right: 10px;
+  }
+  .footer__nav__item a {
+    font-size: 20px;
+  }
+  .footer__social__item a {
+    font-size: 30px;
+  }
+  .footer__logo {
+    display: none;
   }
 }

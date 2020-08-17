@@ -90,21 +90,191 @@
     }
   }
 
+  .about {
+    &__container {
+      &__content {
+        &__text {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .contact {
+      &__banner {
+        &__text {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .footer {
+      &__nav {
+        &__item {
+          margin-right: 10px;
+
+          & a {
+            font-size: 18px;
+          }
+        }
+      }
+      &__social {
+        &__item {
+          & a {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      &__logo {
+        width: 70%;
+      }
+    }
+
+    .about {
+      &__container {
+        &__side {
+          display: none;
+        }
+        &__content {
+          width: 100%;
+
+          &__text {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__gallery {
+        &__item {
+          width: calc(100% / 2 - 10px);
+          margin-bottom: 20px;
+        }
+        &__item:last-child {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .music {
+      &__container {
+        &__right {
+          &__list {
+            & a {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact {
+      &__banner {
+        &__text {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .footer {
+      &__nav {
+        &__item {
+          margin-right: 10px;
+
+          & a {
+            font-size: 15px;
+          }
+        }
+      }
+
+      &__social {
+        &__item {
+          & a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+      width: 90%;
+      position: relative;
+      margin-right: 40px;
+    }
+
+    &__social {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      width: 60%;
+      bottom: -230px;
+
+      &__item {
+        & a {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  .music {
+    height: 90vh;
+
+    &__container {
+      flex-direction: column;
+
+      &__left {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      &__right {
+        width: 100%;
+        &__list {
+          &__item {
+            text-align: center;
+            & a {
+              font-size: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bar {
+    background-position: center;
+  }
+
   .contact {
     &__banner {
       &__text {
-        font-size: 30px;
+        font-size: 22px;
       }
     }
   }
 
   .footer {
+    flex-direction: column;
     &__nav {
       &__item {
         margin-right: 10px;
 
         & a {
-          font-size: 18px;
+          font-size: 20px;
         }
       }
     }
@@ -112,9 +282,12 @@
     &__social {
       &__item {
         & a {
-          font-size: 25px;
+          font-size: 30px;
         }
       }
+    }
+    &__logo {
+      display: none;
     }
   }
 }
