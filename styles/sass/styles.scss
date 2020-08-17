@@ -148,11 +148,13 @@ button {
   &__gallery {
     display: flex;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     &__item {
+      width: calc(100% / 4 - 10px);
+      margin-right: 5px;
       list-style: none;
-      margin-right: 20px;
 
       &__img {
         width: 100%;
@@ -162,7 +164,7 @@ button {
     }
 
     &__item:last-child {
-      margin-right: 0;
+      margin-right: 0px;
     }
   }
 }

@@ -528,14 +528,17 @@ button {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about__gallery__item {
+  width: calc(100% / 4 - 10px);
+  margin-right: 5px;
   list-style: none;
-  margin-right: 20px;
 }
 
 .about__gallery__item__img {
@@ -545,7 +548,7 @@ button {
 }
 
 .about__gallery__item:last-child {
-  margin-right: 0;
+  margin-right: 0px;
 }
 
 .bar {
@@ -800,6 +803,7 @@ button {
   }
 }
 
+/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   #logo {
     opacity: 1;
