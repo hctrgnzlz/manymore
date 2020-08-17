@@ -1,11 +1,12 @@
-$(function () {
-  $(".hamburger").click(function () {
-    // toggle class show on the menu
-    $(".menu").addClass("show");
-  });
+hamburgerMenu = function () {
+  const menu = document.getElementById("nav__list");
+  const close = document.getElementById("toggle");
 
-  $(".exit").click(function () {
-    // toggle class show on the menu
-    $(".menu").removeClass("show");
-  });
-});
+  function handleMenuClick(event) {
+    if (event.target instanceof HTMLAnchorElement) {
+      close.checked = false;
+    }
+  }
+  menu.addEventListener("click", handleMenuClick);
+};
+hamburgerMenu();

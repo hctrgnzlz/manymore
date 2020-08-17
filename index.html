@@ -14,45 +14,37 @@
     <title>Many More Band</title>
   </head>
   <body>
-    <section class="header">
-      <h1 class="header__title">Many More \\</h1>
-      <button class="hamburger">
-        <i class="fas fa-bars"></i>
-        <p class="sr-only">Click here to open up hamburger menu</p>
-      </button>
-      <nav class="menu">
-        <div class="fullscreen">
-          <button class="exit">
-            <i class="fas fa-times"></i>
-            <p class="sr-only">Click me to close the navigation.</p>
-          </button>
+    <section class="nav">
+      <h1 class="nav__title">Many More //</h1>
 
-          <ul class="header__nav">
-            <li class="header__nav__item">
-              <img
-                class="hamburger__logo"
-                src="./assets/logoblack.png"
-                alt=""
-              />
-            </li>
-            <li class="header__nav__item">
-              <a href="">Home</a>
-            </li>
-            <li class="header__nav__item">
-              <a href="#about">About</a>
-            </li>
-            <li class="header__nav__item">
-              <a href="tour.html">Tour</a>
-            </li>
-            <li class="header__nav__item">
-              <a href="#music">Music</a>
-            </li>
-            <li class="header__nav__item">
-              <a href="#contact">Book Now</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="nav__toggle">
+        <input type="checkbox" id="toggle" />
+        <span aria-label="navigation bar"><i class="fas fa-bars"></i> </span>
+
+        <ul id="nav__list" class="nav__list">
+          <li class="nav__list__item">
+            <span aria-label="logo"
+              ><img class="nav__logo" id="logo" src="./assets/logoblack.png"
+            /></span>
+          </li>
+
+          <li class="nav__list__item">
+            <a href="index.html">Home</a>
+          </li>
+
+          <li class="nav__list__item">
+            <a href="#about">About</a>
+          </li>
+
+          <li class="nav__list__item">
+            <a href="#music">Music</a>
+          </li>
+
+          <li class="nav__list__item">
+            <a href="#contact">Book Now</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="hero">
