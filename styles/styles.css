@@ -599,7 +599,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 70vh;
+  height: 100vh;
 }
 
 .music__container {
@@ -994,7 +994,7 @@ button {
             justify-content: space-between;
     padding: 0;
     width: 60%;
-    bottom: -230px;
+    bottom: -160px;
   }
   .hero__social__item a {
     font-size: 40px;
@@ -1019,7 +1019,7 @@ button {
     text-align: center;
   }
   .music__container__right__list__item a {
-    font-size: 50px;
+    font-size: 40px;
   }
   .bar {
     background-position: center;
@@ -1032,15 +1032,23 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__nav {
+    margin: 0;
   }
   .footer__nav__item {
     margin-right: 10px;
   }
   .footer__nav__item a {
     font-size: 20px;
+    margin: 0;
+    padding: 0;
   }
   .footer__social__item a {
-    font-size: 30px;
+    font-size: 25px;
   }
   .footer__logo {
     display: none;

@@ -221,7 +221,7 @@
       justify-content: space-between;
       padding: 0;
       width: 60%;
-      bottom: -230px;
+      bottom: -160px;
 
       &__item {
         & a {
@@ -247,7 +247,7 @@
           &__item {
             text-align: center;
             & a {
-              font-size: 50px;
+              font-size: 40px;
             }
           }
         }
@@ -269,12 +269,16 @@
 
   .footer {
     flex-direction: column;
+    justify-content: center;
     &__nav {
+      margin: 0;
       &__item {
         margin-right: 10px;
 
         & a {
           font-size: 20px;
+          margin: 0;
+          padding: 0;
         }
       }
     }
@@ -282,7 +286,7 @@
     &__social {
       &__item {
         & a {
-          font-size: 30px;
+          font-size: 25px;
         }
       }
     }
